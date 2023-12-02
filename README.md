@@ -2,8 +2,8 @@
 #######################
 Provide requirements:
 
-**1. Change the variable of the config file for and put your config VPN
-**> ./config:
+<h1>1. Change the variable of the config file for and put your config VPN</h1>
+> ./config:
 ```
 host = <VPN SERVER>
 port = <PORT>
