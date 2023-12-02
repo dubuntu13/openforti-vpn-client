@@ -22,7 +22,7 @@ use these command's:
 $ ssh-keygen -t rsa
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub username@<remote IP>
 
-READY TO GO
+<h3>READY TO GO</h3>
 $ docker build -t <image-name> .
 $ docker-compose up -d
 
