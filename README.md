@@ -2,7 +2,7 @@
 #######################
 Provide requirements:
 
-1.<h3>config file of openfortivpn</h3>
+1.<h1>config file of openfortivpn</h1>
 $ vim ./config:
 ```
 host = <VPN SERVER>
