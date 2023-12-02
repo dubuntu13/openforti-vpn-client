@@ -1,4 +1,4 @@
-# openforti-vpn-client
+# openforti-vpn-client<br/>
 #######################
 Provide requirements:
 
@@ -20,10 +20,10 @@ vim ./docker-compose.yml
 <h1>4.</h1><h3>Generate ssh-key and copy the publice-key to the host that you want to tunnle to it, and put a private key in this local directory.</h3>
 use these command's:
 $ ssh-keygen -t rsa
-$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@<remote IP>
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@<remote ip>
 
 <h3>READY TO GO</h3>
 $ docker build -t <br/>
 $ docker-compose up -d
 
-##############################easy peasy :))############################
+##########################easy peasy :))############################
