@@ -23,7 +23,7 @@ $ ssh-keygen -t rsa
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub username@<remote IP>
 
 <h3>READY TO GO</h3>
-$ docker build -t <image-name> .
+$ docker build -t <br/>
 $ docker-compose up -d
 
 ##############################easy peasy :))############################
