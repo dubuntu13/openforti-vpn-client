@@ -2,7 +2,7 @@
 #######################
 Provide requirements:
 
-<h1>1. Change the variable of the config file for and put your config VPN</h1>
+1.<h1>config file of openfortivpn</h1>
 > ./config:
 ```
 host = <VPN SERVER>
@@ -12,17 +12,10 @@ password = <PASWWORD>
 trusted-cert = <cert key> >> "you can connect on your host to the vpn and service will give you the cert and put it in here"
 ```
 
-
-
-2. replace your config for ssh and tunnle in the file below:
+2.<h1>replace your config for ssh and tunnle in the file below</h1>
 ./forti.sh
 
-
-
-
-3. replace your variable in the ./docker-compose.yml file
-
-
+3.<h1>replace your variable in the ./docker-compose.yml file</h1>
 
 
 4. Generate ssh-key and copy the publice-key to the host that you want to tunnle to it, and put a private key in this local directory.
