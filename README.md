@@ -4,7 +4,7 @@ Provide requirements:
 
 <h1>1.</h1><h3>config file of openfortivpn</h3>
 $ vim ./config:
-```
+```<br/>
 host = #VPN SERVER<br/>
 port = #PORT<br/>
 username = #USERNAME<br/>
@@ -15,7 +15,7 @@ trusted-cert = #cert key >> "you can connect on your host to the vpn and service
  $ vim ./forti.sh
 
 <h1>3.</h1><h3>replace your variable in the ./docker-compose.yml file</h3>
-vim ./docker-compose.yml
+vim ./docker-compose.yml<br/>
 
 <h1>4.</h1><h3>Generate ssh-key and copy the publice-key to the host that you want to tunnle to it, and put a private key in this local directory.</h3>
 use these command's:
