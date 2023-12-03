@@ -1,0 +1,14 @@
+version: '3'
+services:
+  forti:
+    build: .
+    network_mode: "host"
+    container_name: <container-name>
+    image: <image-name>
+    user: "root:root"
+    privileged: true
+    volumes:
+      - ./config:/etc/openfortivpn/config
+      - /root/.ssh/id_rsa:/root/.ssh/id_rsa
+      - ./forti.sh:/opt/forti.sh
+    command: /opt/forti1.sh

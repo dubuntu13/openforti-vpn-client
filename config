@@ -1,0 +1,8 @@
+### configuration file for openfortivpn, see man openfortivpn(1) ###
+
+host = vpngw.ito.gov.ir
+port = 443
+username = mbas-user14
+password = @f£Ww}mQKy£tZ!2g@d14*BZn9[9h9D
+trusted-cert = e4177e4d4300331e595917613e43fd01aa461daa1fc573547588a4f34f2d6d3e
+
