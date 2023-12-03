@@ -18,12 +18,12 @@ trusted-cert = #cert key >> "you can connect on your host to the vpn and service
 vim ./docker-compose.yml<br/>
 
 <h1>4.</h1><h3>Generate ssh-key and copy the publice-key to the host that you want to tunnle to it, and put a private key in this local directory.</h3>
-use these command's:
-$ ssh-keygen -t rsa
-$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@
+use these command's:<br/>
+$ ssh-keygen -t rsa<br/>
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub username@IP <br/>
 
 <h3>READY TO GO</h3>
 $ docker build -t <br/>
-$ docker-compose up -d
+$ docker-compose up -d<br/>
 
 ##########################easy peasy :))############################
