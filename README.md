@@ -1,5 +1,7 @@
 # openforti-vpn-client<br/>
 #######################
+you can customize the docker-compose.yml with your need, and you can put multiple container with diffrent openfortivpn connection in docker-compose and connect to them at the same time.
+
 Provide requirements:
 
 <h1>1.</h1><h3>config file of openfortivpn</h3>
