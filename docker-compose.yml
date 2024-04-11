@@ -9,4 +9,4 @@ services:
     volumes:
       - ./config:/etc/openfortivpn/config
       - ./forti.sh:/opt/forti.sh
-    command: /opt/forti1.sh
+    command: /opt/forti.sh
