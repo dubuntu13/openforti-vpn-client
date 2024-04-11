@@ -20,7 +20,7 @@ trusted-cert = #cert key >> "you can connect on your host to the vpn and service
 vim ./docker-compose.yml<br/>
 
 <h3>READY TO GO</h3>
-$ docker build -t <br/>
+$ docker build -t <Image nem><br/>
 $ docker-compose up -d<br/>
 
 ##########################easy peasy :))############################
