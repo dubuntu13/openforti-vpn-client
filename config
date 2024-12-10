@@ -1,7 +1,0 @@
-### configuration file for openfortivpn, see man openfortivpn(1) ###
-
-host = <your gatewa>
-port = 443
-username = <you username>
-password = <password>
-trusted-cert = <Certificate>
