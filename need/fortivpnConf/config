@@ -1,0 +1,6 @@
+host = <Gateway>
+port = 443
+username = <Username>
+password = <Password>
+trusted-cert = <Cert Forti>
+

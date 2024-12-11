@@ -53,7 +53,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
         echo "      - $network" >> $OUTPUT_COMPOSE
         echo "    volumes:" >> $OUTPUT_COMPOSE
         echo "      - $config_path:/etc/openfortivpn/config" >> $OUTPUT_COMPOSE
-        echo "      - ./need/forti.sh:/opt/forti.sh" >> $OUTPUT_COMPOSE
+        echo "      - ./need/fortiDockerfile/forti.sh:/opt/forti.sh" >> $OUTPUT_COMPOSE
         echo "    command: /opt/forti.sh" >> $OUTPUT_COMPOSE
     fi
 
