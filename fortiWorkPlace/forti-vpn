@@ -1,6 +1,0 @@
-host = <Your Host Gateway>
-port = 443
-username = <Forti UserName>
-password = <Password>
-trusted-cert = <Trustet Cert>
-
