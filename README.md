@@ -20,52 +20,82 @@ Before using this project, ensure you have the following installed:
 ## File Structure
 
 ```
-.
-├── need/
-│   ├── routing.conf               # Configuration file for routing rules
-│   ├── kerioDockerfile/
-│   │   └── Dockerfile             # Dockerfile for Kerio VPN container
-│   ├── fortiDockerfile/
-│       └── Dockerfile             # Dockerfile for Forti VPN container
-├── up.sh                          # Main script to build images, start containers, and configure routing
-└── docker-compose.yml             # Docker Compose file to define and run multi-container setup
+├── conf
+├── docker-compose-kerio.yml
+├── generate-compose.sh
+├── id_rsa.pub
+├── need
+│   ├── connections.conf
+│   ├── fortiDockerfile
+│   │   ├── Dockerfile
+│   │   └── forti.sh
+│   ├── fortivpnConf
+│   │   └── config
+│   ├── kerioDockerfile
+│   │   ├── Dockerfile
+│   │   └── entrypoint.sh
+│   ├── keriovpnConf
+│   │   └── kerio-kvc.conf
+│   └── routing.conf
+├── README.md
+├── readme.txt
+└── up.sh
+
 ```
+## First of All Add Your client configs
+1. openforti client config directory is:
+   ```
+   ./need/fortivpnConf/<Put youd forti's config into this directory>
+2. kerio-kvc client config directory:
+   ```
+   ./need/keriovpnConf/<Put your kerio kvc client into this directory>
+
+## Manage your VPN's image's and container's:
+1. Edit ./need/connections.conf
+   ```
+      KERIO_VPN_CONNECTIONS:
+        kerio1 kerio-vpn1 kvnet1 ./need/keriovpnConf/kerio-kvc.conf
+
+      FORTI_VPN_CONNECTIONS:
+        forti2 forti-vpn2 fortinet2 ./need/fortivpnConf/moi1
+   ```
+`kerio1` is container name</br>
+`kerio-vpn1` is network name in container</br>
+`./need/keriovpnConf/kerio-kvc.conf` This is the path of the config file</br>
+same in kerio and forti and you can add multiple of each to create and connect to al lof them</br>
+
 
 ## Configuration
 
 ### Routing Configuration File (`routing.conf`)
 
-The `routing.conf` file specifies the routing rules for your containers. Each line should define a container name and the CIDR range it routes, optionally followed by a comment. Example:
+The `routing.conf` After you edit the earlier file now config your route on your host:
 
 ```
 kerio1 192.168.68.0/24 #This is an example
-forti2 192.168.191.0/24 #This is another example
+forti2 192.168.151.0/24 #This is another example
 ```
 
 - **Container Name**: Name of the Docker container (e.g., `kerio1`).
 - **CIDR Range**: Subnet range (e.g., `192.168.68.0/24`).
 - **Comments**: Optional, starting with `#`.
 
-### Dockerfiles
-
-- `kerioDockerfile/Dockerfile`: Defines the Kerio VPN Docker image.
-- `fortiDockerfile/Dockerfile`: Defines the Forti VPN Docker image.
-
-Update these files as needed for your VPN client configurations.
-
-## Usage
+## Now wwe can Start to Connectiong to zones
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/docker-vpn-routing.git
-   cd docker-vpn-routing
+   git clone https://github.com/dubuntu13/openforti-vpn-client
+   cd openforti-vpn-client
    ```
 
-2. Update the `routing.conf` file with your routing rules.
+2. Run the generate-compose.sh.
+   ```
+   ./generate-compose.sh
+   ```
+dobble check the docker-compose that script created and the docker images version musst be equal with the up.sh docker images.
 
-3. Run the script:
+4. Run the script:
    ```bash
-   chmod +x up.sh
    ./up.sh
    ```
 
@@ -97,4 +127,4 @@ Feel free to fork this repository and submit pull requests for improvements or b
 
 ## Author
 
-[Your Name](https://github.com/yourusername)
+https://github.com/dubuntu13
