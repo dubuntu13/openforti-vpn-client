@@ -3,7 +3,7 @@
 # Configuration file path
 CONFIG_FILE="./need/routing.conf"
 DOCKERFILE_KERIO="./need/kerioDockerfile/Dockerfile"
-DOCKER_IMAGE_NAME_KERIO="kerio-vpn:2.0"
+DOCKER_IMAGE_NAME_KERIO="kerio-vpn:1.0"
 DOCKERFILE_FORTI="./need/fortiDockerfile/Dockerfile"
 DOCKER_IMAGE_NAME_FORTI="forti-client:latest"
 
